@@ -1,0 +1,28 @@
+<div class="container-fluid" >
+
+  <br/>
+  <h1>Sorteos</h1>
+  <hr/>
+
+  <div class="alert alert-primary" role="alert"  [hidden]="loadData">
+    Cargando datos...
+  </div>
+
+  <div class="row">
+
+
+
+    <div  *ngFor="let raffle of raffles" class="col-md-3" style="margin-bottom:15px;" >
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{raffle.name}}</h5>
+          <p class="card-text">{{raffle.description}}</p>
+          <a routerLink="/sorteo/{{raffle.id}}" class="btn btn-primary">Participantes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

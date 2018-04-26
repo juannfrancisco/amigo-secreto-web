@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Nuevo Sorteo</h1>
+
+    <div class="form-group">
+      <label for="exampleInputName">Nombre del Sorteo</label>
+      <input type="text" class="form-control" id="exampleInputName" placeholder="Nombre del Sorteo"  [(ngModel)]="raffle.name" />
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputDesc">Descripción del Sorteo</label>
+      <textarea id="exampleInputDesc" class="form-control" placeholder="Nombre del Sorteo" [(ngModel)]="raffle.description" ></textarea>
+    </div>
+
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresar email" [(ngModel)]="raffle.email">
+      <small id="emailHelp" class="form-text text-muted">En esta direccion enviaremos la información para administrar el sorteo .</small>
+    </div>
+
+    <div class="form-group">
+      <label>Fecha del Sorteo</label>
+      <input type="date" class="form-control" placeholder="Fecha del Sorteo"  [(ngModel)]="raffle.date" />
+    </div>
+
+    <div class="form-row">
+      <div class="col">
+        <label>Precio Minimo</label>
+        <input type="number" class="form-control" placeholder="Minimo" [(ngModel)]="raffle.price.min">
+      </div>
+      <div class="col">
+        <label>Precio Maximo</label>
+        <input type="number" class="form-control" placeholder="Maximo" [(ngModel)]="raffle.price.max">
+      </div>
+    </div>
+
+    <br/>
+
+    <button type="submit" class="btn btn-primary" (click)="saveRaffle()">Submit</button>
+
+</div>
